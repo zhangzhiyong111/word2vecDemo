@@ -18,7 +18,7 @@ sys.setdefaultencoding( "utf-8" )
 def getModel( inputFile ) :
 	sentence = word2vec.Text8Corpus( inputFile )  # get the format of word2vec
 	model = word2vec.Word2Vec( sentence , size = 200, window = 5, min_count=5, iter = 5 )  # set the parameters for the model
-	model.save( "./word2vecModel", binary = 0)  # save the model in current dir
+	model.save_word2vec_format( "./word2vecModel", binary = 0)  # save the model in current dir
 
 
 def main() :
